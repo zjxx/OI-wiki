@@ -2,7 +2,7 @@ Author:Backl1ght
 
 tim 排序是归并排序和插入排序的结合，是一个 **稳定** 的排序算法，由 Tim Peters 于 2002 年用 Python 实现。现在，tim 排序是 Python 的标准排序算法，且被 Java SE7 用于对非原始类型的数组排序。
 
-tim 排序在最好情况下的时间复杂度为 $O(n)$ ，最差情况下的时间复杂度为 $O(n \log n)$ ，期望时间复杂度为 $O(n \log n)$ 。tim 排序在最坏情况下的空间复杂度为 $O(n)$ 。
+tim 排序在最好情况下的时间复杂度为 $O(n)$，最差情况下的时间复杂度为 $O(n \log n)$，期望时间复杂度为 $O(n \log n)$。tim 排序在最坏情况下的空间复杂度为 $O(n)$。
 
 ## 算法
 
@@ -35,11 +35,11 @@ $$
 \end{array}
 $$
 
-其中， $getMinRunLength$ 函数是根据当前数组长度确定 $minRun$ 具体值的函数，natural run 的意思是原本就非降序或者严格升序的 run，扩展长度不够的 run 就是用插入排序往 run 中添加元素，第 11 步中仅当栈顶部的两个 run 长度相近的时候才会进行合并。
+其中，$getMinRunLength$ 函数是根据当前数组长度确定 $minRun$ 具体值的函数，natural run 的意思是原本就非降序或者严格升序的 run，扩展长度不够的 run 就是用插入排序往 run 中添加元素，第 11 步中仅当栈顶部的两个 run 长度相近的时候才会进行合并。
 
 ## 复杂度证明
 
-最好情况下，数组本身就有序，即数组本身就是一个 RUN，这个时候 tim 排序就遍历了一遍数组，找到了唯一的 RUN，就结束了。所以，最好的情况下，tim 排序的时间复杂度为 $O(n)$ 。
+最好情况下，数组本身就有序，即数组本身就是一个 RUN，这个时候 tim 排序就遍历了一遍数组，找到了唯一的 RUN，就结束了。所以，最好的情况下，tim 排序的时间复杂度为 $O(n)$。
 
 ## 写在后面
 
@@ -47,8 +47,8 @@ $$
 
 ## 参考资料
 
-1.  [Timsort](https://en.wikipedia.org/wiki/Timsort) 
-2.  [On the Worst-Case Complexity of TimSort](https://drops.dagstuhl.de/opus/volltexte/2018/9467/pdf/LIPIcs-ESA-2018-4.pdf) 
-3.  [original explanation by Tim Peters](https://bugs.python.org/file4451/timsort.txt) 
-4.  [java 实现](https://web.archive.org/web/20150716000631/https://android.googlesource.com/platform/libcore/+/gingerbread/luni/src/main/java/java/util/TimSort.java) 
-5.  [c 语言实现](http://svn.python.org/projects/python/trunk/Objects/listobject.c) 
+1. [Timsort](https://en.wikipedia.org/wiki/Timsort)
+2. [On the Worst-Case Complexity of TimSort](https://drops.dagstuhl.de/opus/volltexte/2018/9467/pdf/LIPIcs-ESA-2018-4.pdf)
+3. [original explanation by Tim Peters](https://bugs.python.org/file4451/timsort.txt)
+4. [java 实现](https://web.archive.org/web/20150716000631/https://android.googlesource.com/platform/libcore/+/gingerbread/luni/src/main/java/java/util/TimSort.java)
+5. [c 语言实现](http://svn.python.org/projects/python/trunk/Objects/listobject.c)
