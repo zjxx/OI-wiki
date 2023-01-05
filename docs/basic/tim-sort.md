@@ -19,12 +19,12 @@ tim 排序的过程就是一个类似归并排序的过程，将数组划分为�
 
 $$
 \begin{array}{ll}
-1 &  \textbf{do}\\
-2 &  \qquad \text{确定 run 的起点}\\
-3 &  \qquad \textbf{if} run \text{比} minRun \text{短}\\
-4 &  \qquad \qquad \text{延长} run \text{直至} \min(minRun, nRemaining)\\
+1 & \textbf{do}\\
+2 & \qquad \text{确定} run \text{的起点}\\
+3 & \qquad \textbf{if} run \text{比} minRun \text{短}\\
+4 & \qquad \qquad \text{延长} run \text{直至} \min(minRun, nRemaining)\\
 5 & \qquad \textbf{push} run \text{放到} pending-run stack \text{上}\\
-6 &  \qquad \textbf{if} pending-run stack \text{最顶上的 2 个} run \text{长度相近}\\
+6 & \qquad \textbf{if} pending-run stack \text{最顶上的 2 个} run \text{长度相近}\\
 7 & \qquad  \qquad \text{合并} pending-run stack \text{最顶上的 2 个} run\\
 8 & \qquad \text{start index} \gets \text{start index} + run \text{的长度}\\
 9 & \qquad nRemaining \gets nRemaining - run \text{的长度}\\
